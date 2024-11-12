@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { typedData } from '~test/src/constants.js'
+import { typedData } from '../../../test/src/constants.js'
 import { pad } from '../data/pad.js'
 import { toHex } from '../encoding/toHex.js'
 
@@ -227,6 +227,6 @@ test('https://github.com/wevm/viem/issues/2888', () => {
 
     Struct type must not be a Solidity type.
 
-    Version: viem@x.y.z]
+    Version: viem@2.21.44]
   `)
 })
