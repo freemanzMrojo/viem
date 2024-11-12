@@ -61,6 +61,18 @@ test('domain: empty name', () => {
   )
 })
 
+test('wrong domain value', () => {
+  expect(
+    hashTypedData({
+      ...typedData.complex,
+      domain: 'wrong' as unknown as Record<string, unknown>,
+      primaryType: 'Mail',
+    }),
+  ).toMatchInlineSnapshot(
+    '"0x14ed1dbbfecbe5de3919f7ea47daafdf3a29dfbb60dd88d85509f79773d503a5"',
+  )
+})
+
 test('minimal valid typed message', () => {
   const hash = hashTypedData({
     types: {
